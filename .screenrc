@@ -1,0 +1,13 @@
+shell bash
+vbell off
+termcapinfo xterm* ti@:te@
+defscrollback 10000
+autodetach on
+altscreen on
+defutf8 on
+nonblock on
+startup_message off
+activity              "%C -> %n%f %t activity!"
+hardstatus alwayslastline
+hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %d/%m %{W}%c %{g}]'
+source ${HOME}/.screenrc-local
