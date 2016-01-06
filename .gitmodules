@@ -1,0 +1,6 @@
+[submodule "github/solarized"]
+	path = github/solarized
+	url = git://github.com/altercation/solarized.git
+[submodule "github/vim-pathogen"]
+	path = github/vim-pathogen
+	url = git://github.com/tpope/vim-pathogen.git
