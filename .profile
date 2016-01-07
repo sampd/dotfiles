@@ -1,5 +1,10 @@
 set -o vi
-alias ls="ls --color=auto" 
+unamestr=`uname`
+if [[ "$unamestr" == 'Linux' ]]; then
+  alias ls="ls --color=auto" 
+elif [[ "$unamestr" == 'Darwin' ]]; then
+  alias ls="ls -G"
+fi
 ps x -o command | grep [s]sh-agent >/dev/null 2>&1
 PATH=$PATH:~/bin
 set -o vi
