@@ -1,8 +1,10 @@
 #!/bin/bash
 
-cp .vimrc ~/
-cp .screenrc ~/
-cp .profile ~/
+cp vimrc ~/.vimrc
+cp screenrc ~/.screenrc
+cp profile ~/.profile
+cp gitconfig ~/.gitconfig
+cp gitignore ~/.gitignore
 
 git submodule init && git submodule update
 
