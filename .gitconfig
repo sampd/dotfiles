@@ -1,0 +1,44 @@
+[user]
+	email = sampd@stumbleupon.com
+	name = Sam William
+ [color "branch"]
+   current = green reverse
+   local = yellow
+   remote = cyan
+[color "diff"]
+   meta = yellow bold
+   frag = magenta bold
+   old = red bold
+   new = green bold
+   whitespace = red reverse
+[color "status"]
+   added = green
+   changed = yellow
+   untracked = cyan
+[color]
+	ui = auto
+[core]
+	excludesfile = /home/sampd/.gitignore
+	whitespace = trailing-space,space-before-tab
+[diff]
+	renames = copies
+	mnemonicprefix = true
+  external = git_diff_wrapper
+[pager]
+  diff =
+[alias]
+  st = status -s
+  stu = status -uno -s
+  prb = pull --rebase
+  sts = stash
+  stp = stash pop
+  ci = commit
+  cp = cherry-pick
+  br = branch
+  co = checkout
+  df = diff
+  dc = diff --cached
+  lg = log -p
+  lol = log --graph --decorate --pretty=oneline --abbrev-commit
+  lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+  ls = ls-files
