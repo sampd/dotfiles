@@ -1,1 +1,1 @@
-alias rd17="sk save && ssh -C -D 1080 samprince_william@rd17d01ls-geo1376.rd.geo.apple.com"
+alias rd17="sk save && ssh -t -C -D  1080 samprince_william@rd17d01ls-geo1376.rd.geo.apple.com \"screen -d -r\" "
