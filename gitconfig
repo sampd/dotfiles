@@ -1,7 +1,7 @@
 [user]
 	email = sam_william@apple.com
 	name = Sam William
- [color "branch"]
+[color "branch"]
    current = green reverse
    local = yellow
    remote = cyan
@@ -16,14 +16,15 @@
    changed = yellow
    untracked = cyan
 [color]
-	ui = auto
+	ui = true
 [core]
 	excludesfile = /home/sampd/.gitignore
 	whitespace = trailing-space,space-before-tab
 [diff]
 	renames = copies
 	mnemonicprefix = true
-  external = git_diff_wrapper
+  prompt = false
+  tool = vimdiff
 [pager]
   diff =
 [alias]
@@ -42,3 +43,7 @@
   lol = log --graph --decorate --pretty=oneline --abbrev-commit
   lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
   ls = ls-files
+[push]
+	default = simple
+[difftool]
+  prompt = false

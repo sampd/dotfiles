@@ -30,7 +30,8 @@ sk () {
            fi
    esac
 }
-if [ -e ~/.profile.local ]
+
+if [ -d ~/.profile.d ]
 then
-  source ~/.profile.local
+  source ~/.profile.d/*
 fi

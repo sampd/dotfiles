@@ -5,6 +5,8 @@ cp screenrc ~/.screenrc
 cp profile ~/.profile
 cp gitconfig ~/.gitconfig
 cp gitignore ~/.gitignore
+mkdir -p ~/.profile.d
+cp git-completion.bash ~/.profile.d/
 
 mkdir -p ~/software 
 pushd ~/software
