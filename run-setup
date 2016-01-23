@@ -3,6 +3,7 @@
 cp vimrc ~/.vimrc
 cp screenrc ~/.screenrc
 cp profile ~/.profile
+ln -sf ~/.profile ~/.bash_profile
 cp gitconfig ~/.gitconfig
 cp gitignore ~/.gitignore
 mkdir -p ~/.profile.d
@@ -10,9 +11,11 @@ cp git-completion.bash ~/.profile.d/
 
 mkdir -p ~/software 
 pushd ~/software
-curl -O http://apache.mirrors.ionfish.org/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz
-tar xvfz apache-maven-3.3.9-bin.tar.gz
+if [ ! -d apache-maven-3.3.9 ]; then
+  curl -O http://apache.mirrors.ionfish.org/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz
+  tar xvfz apache-maven-3.3.9-bin.tar.gz
 echo "PATH=\$PATH:~/software/apache-maven-3.3.9/bin" >> ~/.profile
+fi
 popd
 
 

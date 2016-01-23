@@ -33,5 +33,7 @@ sk () {
 
 if [ -d ~/.profile.d ]
 then
-  source ~/.profile.d/*
+  for f in ~/.profile.d/; do
+    . $f
+  done
 fi
