@@ -5,11 +5,12 @@ if [[ "$unamestr" == 'Linux' ]]; then
 elif [[ "$unamestr" == 'Darwin' ]]; then
   alias ls="ls -G"
 fi
-ps x -o command | grep [s]sh-agent >/dev/null 2>&1
+ps x -o command | grep "[s]sh-agent" > /dev/null 2>&1
 PATH=$PATH:~/bin
 set -o vi
-HISTFILE=~/.history
-HISTSIZE=10000
+HISTSIZE=3000
+SAVEHIST=1000
+HISTFILE=~/.zhistory
 
 PS1="[${HOSTNAME}:\${PWD##*/} \$(git branch 2> /dev/null | grep -e '\* ' | sed 's/^..\(.*\)/{\1}/')]\$ "
 export PS1

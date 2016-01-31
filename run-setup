@@ -8,6 +8,8 @@ cp gitconfig ~/.gitconfig
 cp gitignore ~/.gitignore
 mkdir -p ~/.profile.d
 cp git-completion.bash ~/.profile.d/
+cp zshrc ~/.zshrc
+ln -sf ~/.profile ~/.zprofile
 
 mkdir -p ~/software 
 pushd ~/software
@@ -17,9 +19,12 @@ if [ ! -d apache-maven-3.3.9 ]; then
 echo "PATH=\$PATH:~/software/apache-maven-3.3.9/bin" >> ~/.profile
 fi
 popd
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew install haskell-stack
 
 
 git submodule init && git submodule update
+git config --global core.excludesfile ~/.gitignore
 
 mkdir -p ~/.vim/autoload 
 mkdir -p ~/.vim/bundle 
