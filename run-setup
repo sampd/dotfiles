@@ -4,12 +4,12 @@ cp vimrc ~/.vimrc
 cp screenrc ~/.screenrc
 cp profile ~/.profile
 ln -sf ~/.profile ~/.bash_profile
+ln -sf ~/.profile ~/.zprofile
 cp gitconfig ~/.gitconfig
 cp gitignore ~/.gitignore
 mkdir -p ~/.profile.d
 cp git-completion.bash ~/.profile.d/
 cp zshrc ~/.zshrc
-ln -sf ~/.profile ~/.zprofile
 
 mkdir -p ~/software 
 pushd ~/software
@@ -36,4 +36,4 @@ mkdir -p ~/.vim/bundle
 cp github/vim-pathogen/autoload/pathogen.vim ~/.vim/autoload/pathogen.vim 
 
 cp -R github/solarized/vim-colors-solarized ~/.vim/bundle/
-chsh -s /bin/zsh
+[[ "$SHELL" != "/bin/zsh" ]] && chsh -s /bin/zsh

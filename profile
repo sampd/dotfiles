@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 set -o vi
 unamestr=`uname`
 if [[ "$unamestr" == 'Linux' ]]; then
@@ -11,9 +13,7 @@ set -o vi
 HISTSIZE=3000
 SAVEHIST=1000
 HISTFILE=~/.zhistory
-
-PS1="[${HOSTNAME}:\${PWD##*/} \$(git branch 2> /dev/null | grep -e '\* ' | sed 's/^..\(.*\)/{\1}/')]\$ "
-export PS1
+bindkey '^R' history-incremental-search-backward
 
 sk () {
    case $1 in
@@ -34,7 +34,7 @@ sk () {
 
 if [ -d ~/.profile.d ]
 then
-  for f in ~/.profile.d/; do
+  for f in ~/.profile.d/*; do
     . $f
   done
 fi
