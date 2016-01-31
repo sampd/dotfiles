@@ -36,4 +36,4 @@ mkdir -p ~/.vim/bundle
 cp github/vim-pathogen/autoload/pathogen.vim ~/.vim/autoload/pathogen.vim 
 
 cp -R github/solarized/vim-colors-solarized ~/.vim/bundle/
-chsh
+chsh -s /bin/zsh
