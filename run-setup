@@ -25,6 +25,10 @@ brew install haskell-stack
 
 git submodule init && git submodule update
 git config --global core.excludesfile ~/.gitignore
+pushd github/zsh-git-prompt/
+stack setup
+stack build && stack install
+popd
 
 mkdir -p ~/.vim/autoload 
 mkdir -p ~/.vim/bundle 
@@ -32,3 +36,4 @@ mkdir -p ~/.vim/bundle
 cp github/vim-pathogen/autoload/pathogen.vim ~/.vim/autoload/pathogen.vim 
 
 cp -R github/solarized/vim-colors-solarized ~/.vim/bundle/
+chsh

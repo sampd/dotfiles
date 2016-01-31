@@ -1,6 +1,7 @@
 .classpath
 .project
 .settings/
+**/.stack-work/
 target/
 */target/**
 */.DS_Store
